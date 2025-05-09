@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E3B6B9A-FBDD-4BDE-894A-7E2B76F63F11}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MealCount_V1</RootNamespace>
+    <AssemblyName>MealCount_V1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChargeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChargeEntry.Designer.cs">
+      <DependentUpon>ChargeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MealPortal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MealPortal.Designer.cs">
+      <DependentUpon>MealPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MealSwipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MealSwipe.Designer.cs">
+      <DependentUpon>MealSwipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MealUserRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MealUserRegistration.Designer.cs">
+      <DependentUpon>MealUserRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mtx_MealsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mtx_MealsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChargeEntry.resx">
+      <DependentUpon>ChargeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MealPortal.resx">
+      <DependentUpon>MealPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MealSwipe.resx">
+      <DependentUpon>MealSwipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MealUserRegistration.resx">
+      <DependentUpon>MealUserRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Mtx_MealsDataSet.xsc">
+      <DependentUpon>Mtx_MealsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Mtx_MealsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Mtx_MealsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Mtx_MealsDataSet.xss">
+      <DependentUpon>Mtx_MealsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MealFront.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MealFront2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kitchen 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburger-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-5-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vegetables-set-left-black-slate.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
